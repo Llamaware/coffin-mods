@@ -6,6 +6,10 @@
     ],
     "description": "Changes party character movement to dot movement that does not depend on tiles.",
     "version": "3.1.5",
+    "dependencies": {
+        "game": "*",
+        "spec": "0.1.0"
+    },
     "files": {
         "plugins": [
             "plugins/SAN_AnalogMove.js"

@@ -6,6 +6,10 @@
     ],
     "description": "Add a message backlog function to the game's message system. Toggle it with the PageUp key.",
     "version": "1.01",
+    "dependencies": {
+        "game": "*",
+        "spec": "0.1.0"
+    },
     "files": {
         "plugins": [
             "plugins/YEP_X_MessageBacklog.js"
