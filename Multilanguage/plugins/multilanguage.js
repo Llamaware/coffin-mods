@@ -1,3 +1,6 @@
+const MAX_LENGTH_TL = 50;
+const MAX_LENGTH_EN = 100;
+
 Lang.loadCSV = function (filePath) {
   let csvData = this.newData(),
     fileContent = "";
@@ -167,8 +170,18 @@ Game_Interpreter.prototype.command101 = function () {
           }
         }
         let concatenatedLines = [];
-        concatenatedLines.push(oddLines.join(" ").replace(/\s+/g, " "));
-        concatenatedLines.push(evenLines.join(" ").replace(/\s+/g, " "));
+        let oddConcatenated = oddLines.join(" ").replace(/\s+/g, " ");
+        let evenConcatenated = evenLines.join(" ").replace(/\s+/g, " ");
+        
+        if (oddConcatenated.length > MAX_LENGTH_TL) {
+          oddConcatenated = '\\}' + oddConcatenated + '\\{';
+        }
+        if (evenConcatenated.length > MAX_LENGTH_EN) {
+          evenConcatenated = '\\}' + evenConcatenated + '\\{';
+        }
+        
+        concatenatedLines.push(oddConcatenated);
+        concatenatedLines.push(evenConcatenated);
         for (var k = 0; k < concatenatedLines.length; k++) {
           if (k < MAX_LINES) {
             $gameMessage.add(concatenatedLines[k]);
@@ -206,3 +219,4 @@ Game_Interpreter.prototype.command101 = function () {
 };
 
 Yanfly.Param.MSGDefaultWidth = "1280";
+Yanfly.Param.MSGFontSizeChange = "4";
