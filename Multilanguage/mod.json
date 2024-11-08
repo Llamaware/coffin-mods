@@ -1,0 +1,22 @@
+{
+    "id": "multilanguage",
+    "name": "Multilanguage",
+    "authors": [
+        "OneHalf"
+    ],
+    "description": "Display text in two languages at once. (Any translation + English)",
+    "version": "1.0.0",
+    "spec": "0.1.0",
+    "dependencies": {
+        "game": ">=2.0.14",
+        "spec": "0.1.0"
+    },
+    "files": {
+        "assets": [
+            "img/system/msgimg_0.png"
+        ],
+        "plugins": [
+            "plugins/multilanguage.js"
+        ]
+    }
+}
