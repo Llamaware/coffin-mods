@@ -5,7 +5,7 @@
         "OneHalf"
     ],
     "description": "Display text in two languages at once. (Any translation + English)",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "spec": "0.1.0",
     "dependencies": {
         "game": ">=2.0.14",
